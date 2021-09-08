@@ -1,0 +1,65 @@
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+
+<h1 class="display-4">Suppliers 
+    <a class="btn btn-outline-success" routerLink="/suppliers/add" role="button" style="font-size: xx-small;">Add</a>
+  </h1>
+  
+  <br>
+  
+  <table class="table">
+      <thead class="table-dark">
+        <tr>
+          <th></th>
+          <th>Id</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Phone Number</th>
+          <th>Email</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let x of suppliers">
+          
+          <td></td>
+          <td>{{ x?.supplierId }}</td> 
+          <td>{{ x?.firstName }}</td> 
+          <td>{{ x?.lastName }}</td> 
+          <td>{{ x?.phoneNumber }}</td> 
+          <td>{{ x?.email }}</td>
+          <!-- <td>
+            <a class="btn btn-outline-primary" routerLink="/suppliers/{{ x.supplierId }}" role="button" style="font-size: xx-small;">Open</a>&nbsp;
+            <a class="btn btn-outline-success" routerLink="/suppliers/update/{{ x.supplierId }}" role="button" style="font-size: xx-small;">Update</a>&nbsp;
+            <a class="btn btn-outline-danger" routerLink="/suppliers/delete/{{ x.supplierId }}" role="button" style="font-size: xx-small;">Delete</a>
+          </td> -->
+          <td>
+            <ul class="list-unstyled mb-0 d-flex">
+                <li><a routerLink="/suppliers/{{ x?.supplierId }}" class="text-primary" data-toggle="tooltip" title="" data-original-title="view"><i class="far fa-eye"></i></a></li>&nbsp;&nbsp;
+                <li><a routerLink="/suppliers/update/{{ x?.supplierId }}" class="text-info" data-toggle="tooltip" title="" data-original-title="Edit"><i class="fas fa-pencil-alt"></i></a></li>&nbsp;&nbsp;
+                <li><a routerLink="/suppliers/delete/{{ x?.supplierId }}" class="text-danger" data-toggle="tooltip" title="" data-original-title="Delete"><i class="far fa-trash-alt"></i></a></li>
+              </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <br>
+  
+    <nav aria-label="...">
+      <ul class="pagination">
+        <li class="page-item disabled">
+          <a class="page-link" routerLink="#" tabindex="-1" aria-disabled="true">Previous</a>
+        </li>
+        <li class="page-item"><a class="page-link" routerLink="#">1</a></li>
+        <li class="page-item active" aria-current="page">
+          <a class="page-link" routerLink="#">2</a>
+        </li>
+        <li class="page-item"><a class="page-link" routerLink="#">3</a></li>
+        <li class="page-item"><a class="page-link" routerLink="#">4</a></li>
+        <li class="page-item"><a class="page-link" routerLink="#">5</a></li>
+        <li class="page-item">
+          <a class="page-link" routerLink="#">Next</a>
+        </li>
+      </ul>
+    </nav>

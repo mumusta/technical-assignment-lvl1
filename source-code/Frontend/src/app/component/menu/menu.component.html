@@ -1,0 +1,37 @@
+
+  <nav (onload)="ngOnInit()" class="navbar navbar-expand-lg navbar-light bg-light navbar-dark bg-dark static-top">
+    <div class="container-fluid">
+      <a *ngIf="isLoggedIn" class="navbar-brand" routerLink="/suppliers" href="#">Assignment</a>
+      <a *ngIf="!isLoggedIn" class="navbar-brand" routerLink="/login" href="#">Assignment</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a *ngIf="isLoggedIn" class="nav-link" aria-current="page" routerLink="/suppliers/add" href="#">Add Supplier</a>
+          <!-- <a class="nav-link" href="#">Features</a>
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
+        </div>
+      </div>
+    </div>
+    <button id="SxXx123456789xXxS" style="display: none;" (click)="clickMe()">Click Me</button>
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+              <!-- <a class="nav-link" href="#">Logout</a> -->
+              <a *ngIf="isLoggedIn" class="nav-link" href="/logout" (click)=handleLogout()>Logout</a>
+          </li>
+      </ul>
+  </div>
+  </nav>
+
+  <!-- 
+     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div><a href="https://www.javaguides.net" class="navbar-brand">JavaGuides</a></div>
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+            <li>
+                <a *ngIf="isLoggedIn" class="nav-link" href="/logout" (click)=handleLogout()>Logout</a>
+            </li>
+        </ul>
+    </nav>
+   -->

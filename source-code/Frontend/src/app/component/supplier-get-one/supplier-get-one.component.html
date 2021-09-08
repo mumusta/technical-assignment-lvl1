@@ -1,0 +1,132 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+
+<h1 class="display-4">Supplier</h1>
+
+<br>
+
+<div class="container bootstrap snippets ">
+    <div class="panel-body inf-content" style="background-color: white;">
+        <div class="row" style="margin-top: 30px;">
+            
+            <div class="col-md-4" style="margin-left: 30px;">
+                <img alt="" style="width:300px;" title="" class="img-thumbnail rounded-circle bg-primary" src="./assets/avatar7.png" data-original-title="Usuario"> 
+                
+            </div>
+            
+            <div class="col-md-6">
+                <div><strong>Information</strong><br>
+                
+                </div>
+                <div class="table-responsive">
+                <table class="table table-user-information">
+                    <tbody>
+                        <tr>        
+                            <td>
+                                <strong>
+                                    <span class="glyphicon glyphicon-asterisk text-primary"></span>
+                                    Identification                                                
+                                </strong>
+                            </td>
+                            <td class="text-primary">
+                                {{ supplier?.supplierId }}     
+                            </td>
+                        </tr>
+                        <tr>    
+                            <td>
+                                <strong>
+                                    <span class="glyphicon glyphicon-user  text-primary"></span>    
+                                    First Name                                                
+                                </strong>
+                            </td>
+                            <td class="text-primary">
+                                {{ supplier?.firstName }}     
+                            </td>
+                        </tr>
+                        <tr>        
+                            <td>
+                                <strong>
+                                    <span class="glyphicon glyphicon-cloud text-primary"></span>  
+                                    Last Name                                                
+                                </strong>
+                            </td>
+                            <td class="text-primary">
+                                {{ supplier?.lastName }}  
+                            </td>
+                        </tr>
+    
+                        <tr>        
+                            <td>
+                                <strong>
+                                    <span class="glyphicon glyphicon-bookmark text-primary"></span> 
+                                    Phone Number                                                
+                                </strong>
+                            </td>
+                            <td class="text-primary">
+                                {{ supplier?.phoneNumber }} 
+                            </td>
+                        </tr>
+    
+    
+                        <tr>        
+                            <td>
+                                <strong>
+                                    <span class="glyphicon glyphicon-envelope text-primary"></span> 
+                                    Email                                                
+                                </strong>
+                            </td>
+                            <td class="text-primary">
+                                {{ supplier?.email }}  
+                            </td>
+                        </tr>
+                        <tr>        
+                            <td>
+                                <strong>
+                                    <span class="glyphicon glyphicon-envelope text-primary"></span> 
+                                    Action                                                
+                                </strong>
+                            </td>
+                            <td class="text-primary">
+                                <ul class="list-unstyled mb-0 d-flex">
+                                    <li><a routerLink="/suppliers/update/{{ currentSupplierId }}" class="text-info" data-toggle="tooltip" title="" data-original-title="Edit"><i class="fas fa-pencil-alt"></i></a></li>&nbsp;&nbsp;&nbsp;
+                                    <li><a routerLink="/suppliers/delete/{{ currentSupplierId }}" class="text-danger" data-toggle="tooltip" title="" data-original-title="Delete"><i class="far fa-trash-alt"></i></a></li>
+                                  </ul> 
+                            </td>
+                        </tr>
+                       <!--  <tr>        
+                            <td>
+                                <br>  
+                            </td>
+                            <td>
+                                <br>
+                            </td>
+                        </tr> -->
+                        
+                       <!--  <tr>        
+                            <td>
+                                <strong>
+                                    <span class="glyphicon glyphicon-calendar text-primary"></span>
+                                    created                                                
+                                </strong>
+                            </td>
+                            <td class="text-primary">
+                                20 jul 20014
+                            </td>
+                        </tr>
+                        <tr>        
+                            <td>
+                                <strong>
+                                    <span class="glyphicon glyphicon-calendar text-primary"></span>
+                                    Modified                                                
+                                </strong>
+                            </td>
+                            <td class="text-primary">
+                                 20 jul 20014 20:00:00
+                            </td>
+                        </tr>      -->                               
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>                                        
