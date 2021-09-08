@@ -37,12 +37,7 @@ public class SupplierService {
     SupplierHasProductRepository supplierHasProductRepository;
 
 
-    /**
-     *
-     * @param supplierId xx
-     * @param productId xx
-     * @return xx
-     */
+
     public Supplier addProductToSupplier(Long supplierId, Long productId) {
 
         logger.info("SupplierService.addProductToSupplier => is called");
@@ -70,12 +65,7 @@ public class SupplierService {
     }
 
 
-    /**
-     *
-     * @param supplierId xx
-     * @param productId xx
-     * @return xx
-     */
+
     public Supplier removeProductFromSupplier(Long supplierId, Long productId) {
 
         logger.info("SupplierService.removeProductFromSupplier => is called");
@@ -99,11 +89,7 @@ public class SupplierService {
     }
 
 
-    /**
-     *
-     * @param supplier xx
-     * @return xx
-     */
+
     public Supplier createNewSupplier(Supplier supplier){
 
         logger.info("SupplierService.createNewSupplier => is called");
@@ -127,12 +113,7 @@ public class SupplierService {
     }
 
 
-    /**
-     *
-     * @param supplierId xx
-     * @param supplier xx
-     * @return xx
-     */
+
     public Supplier updateSupplierById(Long supplierId, Supplier supplier){
 
         logger.info("SupplierService.updateSupplierById => is called");
@@ -174,11 +155,7 @@ public class SupplierService {
     }
 
 
-    /**
-     *
-     * @param supplierId xx
-     * @return xx
-     */
+
     public Supplier getSupplierById(Long supplierId){
 
         logger.info("SupplierService.getSupplierById => is called");
@@ -197,12 +174,24 @@ public class SupplierService {
     }
 
 
-    /**
-     *
-     * @param pageNumber xxx
-     * @param pageSize xxx
-     * @return xxx
-     */
+    public Supplier getSupplierByEmail(String email) {
+
+        logger.info("SupplierService.getSupplierById => is called");
+        logger.debug(String.format("SupplierService.getSupplierById(%s)", email));
+
+        if (isSupplierExistsByEmail(email)){
+
+            return supplierRepository.findByEmail(email);
+        }
+
+        else {
+
+            logger.error(String.format("No Record with email %s was found in our database", email));
+            throw new NotFoundException(String.format("No Record with email %s was found in our database", email));
+        }
+    }
+
+
     public Page< Supplier > getAllSuppliers(int pageNumber, int pageSize){
 
         logger.info("SupplierService.getAllSuppliers => is called");
@@ -212,11 +201,7 @@ public class SupplierService {
     }
 
 
-    /**
-     *
-     * @param supplierId xx
-     * @return xx
-     */
+
     public boolean deleteSupplierById(Long supplierId){
 
         logger.info("SupplierService.deleteSupplierById => is called");
@@ -268,4 +253,5 @@ public class SupplierService {
 
         return supplierRepository.existsByEmail(email);
     }
+
 }

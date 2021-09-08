@@ -33,11 +33,7 @@ public class SupplierController {
         this.supplierService = supplierService;
     }
 
-    /**
-     *
-     * @param supplier xx
-     * @return xx
-     */
+
     @PostMapping(value = { "" })
     @ApiOperation(
             value = "Create new Supplier",
@@ -58,12 +54,7 @@ public class SupplierController {
     }
 
 
-    /**
-     *
-     * @param pageNumber xx
-     * @param pageSize xx
-     * @return xx
-     */
+
     @GetMapping(value = { "" })
     @ApiOperation(
             value = "Get all Suppliers in pages",
@@ -94,11 +85,7 @@ public class SupplierController {
     }
 
 
-    /**
-     *
-     * @param id xx
-     * @return xx
-     */
+
     @GetMapping(value = { "/{id}" })
     @ApiOperation(
             value = "Get Supplier by id",
@@ -119,11 +106,7 @@ public class SupplierController {
     }
 
 
-    /**
-     *
-     * @param id xx
-     * @return xx
-     */
+
     @GetMapping(value = { "/{id}/products"})
     @ApiOperation(
             value = "Get all products of a supplier by id",
@@ -144,12 +127,7 @@ public class SupplierController {
     }
 
 
-    /**
-     *
-     * @param supplierId xx
-     * @param productId xx
-     * @return xx
-     */
+
     @PostMapping(value = { "/{supplierId}/products/{productId}" })
     @ApiOperation(
             value = "Add product to supplier",
@@ -172,12 +150,7 @@ public class SupplierController {
     }
 
 
-    /**
-     *
-     * @param supplierId xx
-     * @param productId xx
-     * @return xx
-     */
+
     @DeleteMapping(value = { "/{supplierId}/products/{productId}" })
     @ApiOperation(
             value = "Remove product from supplier",
@@ -200,12 +173,7 @@ public class SupplierController {
     }
 
 
-    /**
-     *
-     * @param id xx
-     * @param supplier xx
-     * @return xx
-     */
+
     @PutMapping(value = { "/{id}" })
     @ApiOperation(
             value = "Update a Supplier by id",
@@ -230,11 +198,7 @@ public class SupplierController {
     }
 
 
-    /**
-     *
-     * @param id xx
-     * @return xx
-     */
+
     @DeleteMapping(value = { "/{id}" })
     @ApiOperation(
             value = "Delete a supplier by id",

@@ -34,13 +34,7 @@ public class OrderService {
     ProductService productService;
 
 
-    /**
-     *
-     * @param orderId xx
-     * @param productId xx
-     * @param quantity xx
-     * @return xx
-     */
+
     public Order addProductToOrder(Long orderId, Long productId, int quantity) {
 
         logger.info("OrderService.addProductToOrder => is called");
@@ -72,13 +66,7 @@ public class OrderService {
         return orderRepository.save(order);
     }
 
-    /**
-     *
-     * @param orderId xx
-     * @param productId xx
-     * @param quantity xx
-     * @return xx
-     */
+
     public Order removeProductFromOrder(Long orderId, Long productId, int quantity) {
 
         logger.info("OrderService.removeProductFromOrder => is called");
@@ -117,11 +105,7 @@ public class OrderService {
     }
 
 
-    /**
-     *
-     * @param order xxx
-     * @return xxx
-     */
+
     public Order createNewOrder(Order order){
 
         logger.info("OrderService.createNewOrder => is called");
@@ -133,12 +117,7 @@ public class OrderService {
     }
 
 
-    /**
-     *
-     * @param orderId xx
-     * @param order xx
-     * @return xx
-     */
+
     public Order updateOrderById(Long orderId, Order order){
 
         logger.info("OrderService.updateOrderById => is called");
@@ -161,11 +140,7 @@ public class OrderService {
     }
 
 
-    /**
-     *
-     * @param orderId xx
-     * @return xx
-     */
+
     public Order getOrderById(Long orderId){
 
         logger.info("OrderService.getOrderById => is called");
@@ -184,12 +159,7 @@ public class OrderService {
     }
 
 
-    /**
-     *
-     * @param pageNumber xx
-     * @param pageSize xx
-     * @return xx
-     */
+
     public Page< Order > getAllOrders(int pageNumber, int pageSize){
 
         logger.info("OrderService.getAllOrders => is called");
@@ -199,11 +169,7 @@ public class OrderService {
     }
 
 
-    /**
-     *
-     * @param orderId xx
-     * @return xx
-     */
+
     public boolean deleteOrderById(Long orderId){
 
         logger.info("OrderService.deleteOrderById => is called");

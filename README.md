@@ -55,11 +55,12 @@ The system help to model and manipulate the three entities (Supplier, Product, a
  ## Quick start
  
  ### Steps:
- 0. Username: "Admin", and Password: "123".
- 1. git clone https://github.com/mumusta/technical-assignment-lvl1.git
- 2. Run *AssignmentApplication* from Backend then run `ng serve` from Frontend.
- 3. You can navigate to `http://localhost:9696/swagger-ui/index.html` for APIs.
- 4. You can navigate to `http://localhost:4200/` for Angular app.
+ - Username: "Admin", and Password: "123".
+ - git clone https://github.com/mumusta/technical-assignment-lvl1.git
+ - Update datasource information in the application.properties file to match a local database of yours, or create a database and user that matches the application.properties.
+ - Run *AssignmentApplication* from Backend then run `ng serve` from Frontend.
+ - You can navigate to `http://localhost:9696/swagger-ui/index.html` for APIs.
+ - You can navigate to `http://localhost:4200/` for Angular app.
 
 ## Screenshots
 ![s0](https://user-images.githubusercontent.com/33350449/132582532-ac220a09-e8f2-4c08-9aef-0d83f140ddc5.png)

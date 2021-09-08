@@ -28,11 +28,7 @@ public class ProductService {
     ProductRepository productRepository;
 
 
-    /**
-     *
-     * @param product xx
-     * @return xx
-     */
+
     public Product createNewProduct(Product product){
 
         logger.info("ProductService.createNewProduct => is called");
@@ -53,12 +49,7 @@ public class ProductService {
     }
 
 
-    /**
-     *
-     * @param productId
-     * @param product
-     * @return
-     */
+
     public Product updateProductById(Long productId, Product product){
 
         logger.info("ProductService.updateProductById => is called");
@@ -94,11 +85,7 @@ public class ProductService {
     }
 
 
-    /**
-     *
-     * @param productId
-     * @return
-     */
+
     public Product getProductById(Long productId){
 
         logger.info("ProductService.getProductById => is called");
@@ -117,11 +104,7 @@ public class ProductService {
     }
 
 
-    /**
-     *
-     * @param name
-     * @return
-     */
+
     public Product getProductByName(String name){
 
         logger.info("ProductService.getProductByName => is called");
@@ -140,12 +123,7 @@ public class ProductService {
     }
 
 
-    /**
-     *
-     * @param pageNumber
-     * @param pageSize
-     * @return
-     */
+
     public Page< Product > getAllProducts(int pageNumber, int pageSize){
 
         logger.info("ProductService.getAllProducts => is called");
@@ -155,11 +133,7 @@ public class ProductService {
     }
 
 
-    /**
-     *
-     * @param productId
-     * @return
-     */
+
     public boolean deleteProductById(Long productId){
 
         logger.info("ProductService.deleteProductById => is called");

@@ -35,11 +35,7 @@ public class ProductController {
         this.productService = productService;
     }
 
-    /**
-     *
-     * @param product
-     * @return
-     */
+
     @PostMapping(value = { "" })
     @ApiOperation(
             value = "Create new Product",
@@ -61,12 +57,6 @@ public class ProductController {
 
 
 
-    /**
-     *
-     * @param pageNumber
-     * @param pageSize
-     * @return
-     */
     @GetMapping(value = { "" })
     @ApiOperation(
             value = "Get all products in pages",
@@ -97,11 +87,7 @@ public class ProductController {
     }
 
 
-    /**
-     *
-     * @param id
-     * @return
-     */
+
     @GetMapping(value = { "/{id}" })
     @ApiOperation(
             value = "Get product by id",
@@ -122,11 +108,7 @@ public class ProductController {
     }
 
 
-    /**
-     *
-     * @param id
-     * @return
-     */
+
     @GetMapping(value = { "/{id}/suppliers" })
     @ApiOperation(
             value = "Get all suppliers of a product by id",
@@ -152,12 +134,7 @@ public class ProductController {
     }
 
 
-    /**
-     *
-     * @param id
-     * @param product
-     * @return
-     */
+
     @PutMapping(value = { "/{id}" })
     @ApiOperation(
             value = "Update a product by id",
@@ -182,11 +159,7 @@ public class ProductController {
     }
 
 
-    /**
-     *
-     * @param id xx
-     * @return xx
-     */
+
     @DeleteMapping(value = { "/{id}" })
     @ApiOperation(
             value = "Delete a product by id",

@@ -34,11 +34,7 @@ public class OrderController {
     }
 
 
-    /**
-     *
-     * @param order xxx
-     * @return xxx
-     */
+
     @PostMapping(value = { "" })
     @ApiOperation(
             value = "Create new Order",
@@ -62,12 +58,7 @@ public class OrderController {
     }
 
 
-    /**
-     *
-     * @param pageNumber xx
-     * @param pageSize xx
-     * @return xx
-     */
+
     @GetMapping(value = { "" })
     @ApiOperation(
             value = "Get all orders in pages",
@@ -98,11 +89,7 @@ public class OrderController {
     }
 
 
-    /**
-     *
-     * @param id xx
-     * @return xx
-     */
+
     @GetMapping(value = { "/{id}" })
     @ApiOperation(
             value = "Get an Order by id",
@@ -122,13 +109,8 @@ public class OrderController {
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
-    /**
-     *
-     * @param orderId xx
-     * @param productId xx
-     * @param quantity xx
-     * @return xx
-     */
+
+
     @PostMapping(value = { "/{orderId}/products/{productId}" })
     @ApiOperation(
             value = "Add product to order",
@@ -156,13 +138,7 @@ public class OrderController {
     }
 
 
-    /**
-     *
-     * @param orderId xx
-     * @param productId xx
-     * @param quantity xx
-     * @return xx
-     */
+
     @DeleteMapping(value = { "/{orderId}/products/{productId}" })
     @ApiOperation(
             value = "Remove product from order",
@@ -190,12 +166,7 @@ public class OrderController {
     }
 
 
-    /**
-     *
-     * @param id xx
-     * @param order xx
-     * @return xx
-     */
+
     @PutMapping(value = { "/{id}" })
     @ApiOperation(
             value = "Update an Order by id",
@@ -222,11 +193,7 @@ public class OrderController {
     }
 
 
-    /**
-     *
-     * @param id xx
-     * @return xx
-     */
+
     @DeleteMapping(value = { "/{id}" })
     @ApiOperation(
             value = "Delete an order by id",

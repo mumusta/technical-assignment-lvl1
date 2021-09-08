@@ -1,4 +1,4 @@
-package task.orange.assignment.controller;
+package task.orange.assignment;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -34,8 +34,7 @@ import static org.junit.jupiter.api.Assertions.*;
         webEnvironment = SpringBootTest.WebEnvironment.MOCK
 )
 @AutoConfigureMockMvc
-//@TestPropertySource(locations = "classpath:application-integrationtest.properties")
-class ProductControllerTest {
+class ProductTest {
 
     @Autowired
     private MockMvc mockMvc;
