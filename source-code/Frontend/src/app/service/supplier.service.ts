@@ -23,7 +23,7 @@ export class SupplierService {
   }*/
 
   public getAllSuppliers(): Observable<Supplier[]> {
-    return this.httpClient.get<GetResponse>(`${this.baseUrl}/suppliers`).pipe(
+    return this.httpClient.get<GetResponse>(`${this.baseUrl}/suppliers?pageNumber=0&pageSize=1000000`).pipe(
       map(response => response.content)
     );
   }

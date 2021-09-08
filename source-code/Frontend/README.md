@@ -1,4 +1,6 @@
-# Assignmentapp
+# Frontend
+
+![front](https://user-images.githubusercontent.com/33350449/132551824-009deb6c-c07b-4eb5-aa71-167df4868e9a.png)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.1.
 

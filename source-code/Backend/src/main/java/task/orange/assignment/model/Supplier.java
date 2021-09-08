@@ -86,13 +86,7 @@ public class Supplier implements Serializable {
     @OneToMany(mappedBy = "supplier", cascade = CascadeType.ALL, orphanRemoval = true)
     private List < SupplierHasProduct > ownedProducts;
 
-    /*@ManyToMany
-    @JoinTable(
-        name = "supplier_has_product",
-        joinColumns = @JoinColumn(name = "supplier_id_fk"), 
-        inverseJoinColumns = @JoinColumn(name = "product_id_fk")
-    )
-    private List < Product > ownedProducts;*/
+
     
     protected Supplier() {}
 

@@ -54,17 +54,20 @@ The system help to model and manipulate the three entities (Supplier, Product, a
 
  ## Quick start
  
- ### Required:
- - Java 8
- - Maven 
- - ...
- 
  ### Steps:
+ 0. Username: "Admin", and Password: "123".
  1. git clone https://github.com/mumusta/technical-assignment-lvl1.git
- 2. mvn clean package xxx
- 3. cd xxx
- 4. java -jar xxx
- 5. Go to http://localhost:9696/swagger-ui/index.html
+ 2. Run *AssignmentApplication* from Backend then run `ng serve` from Frontend.
+ 3. You can navigate to `http://localhost:9696/swagger-ui/index.html` for APIs.
+ 4. You can navigate to `http://localhost:4200/` for Angular app.
 
 ## Screenshots
-![1](xxx)
+![s0](https://user-images.githubusercontent.com/33350449/132582532-ac220a09-e8f2-4c08-9aef-0d83f140ddc5.png)
+![s1](https://user-images.githubusercontent.com/33350449/132582524-1a88898e-8666-4616-be8f-f2de91e1c4e5.png)
+![s2](https://user-images.githubusercontent.com/33350449/132582521-9df5acc3-e042-4e26-adec-41c8c9bb945a.png)
+![s3](https://user-images.githubusercontent.com/33350449/132582518-d805a738-81f0-426b-a6d0-44c7077857e1.png)
+![a-login](https://user-images.githubusercontent.com/33350449/132582545-02240f7b-5ffa-4ab1-8d31-3e0f4a929156.png)
+![a-all](https://user-images.githubusercontent.com/33350449/132582542-d064a4fe-19c1-467f-9123-78cdbcd1f891.png)
+![a-add](https://user-images.githubusercontent.com/33350449/132582547-d5b3b89a-3789-467f-a7a6-78eaacf8e055.png)
+![a-update](https://user-images.githubusercontent.com/33350449/132582537-5c05dbc6-9256-46eb-befd-d99cb2f231ae.png)
+![a-del](https://user-images.githubusercontent.com/33350449/132582535-8d52a651-0195-498b-8a08-8e9994fdd729.png)
