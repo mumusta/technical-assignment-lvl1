@@ -55,7 +55,7 @@ The system help to model and manipulate the three entities (Supplier, Product, a
  ## Quick start
  
  ### Steps:
- - Username: "Admin", and Password: "123".
+ - Username: "admin", and Password: "123".
  - git clone https://github.com/mumusta/technical-assignment-lvl1.git
  - Update datasource information in the application.properties file to match a local database of yours, or create a database and user that matches the application.properties.
  - Run *AssignmentApplication* from Backend then run `ng serve` from Frontend.
