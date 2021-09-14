@@ -25,7 +25,7 @@ import javax.validation.Valid;
 @RequestMapping(value = "/api/v1/orders")
 public class OrderController {
 
-    Logger logger = LoggerFactory.getLogger(OrderController.class);
+    private final Logger logger = LoggerFactory.getLogger(OrderController.class);
 
     private OrderService orderService;
 

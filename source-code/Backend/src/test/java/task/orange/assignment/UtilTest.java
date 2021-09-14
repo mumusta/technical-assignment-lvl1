@@ -52,9 +52,7 @@ public class UtilTest {
 
                 getRandString(22, CHAR_SET_0),
 
-                getRandString(33, CHAR_SET_a) + "@gmail.com",
-
-                new ArrayList<>());
+                getRandString(33, CHAR_SET_a) + "@gmail.com");
     }
 
     public static Order createRandOrder(){

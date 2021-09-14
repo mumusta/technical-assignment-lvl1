@@ -25,7 +25,7 @@ import task.orange.assignment.repository.OrderRepository;
 @Transactional
 public class OrderService {
 
-    Logger logger = LoggerFactory.getLogger(OrderService.class);
+    private final Logger logger = LoggerFactory.getLogger(OrderService.class);
     
     @Autowired
     OrderRepository orderRepository;

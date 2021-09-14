@@ -27,7 +27,7 @@ import javax.validation.Valid;
 @RequestMapping(value = "/api/v1/products")
 public class ProductController {
 
-    Logger logger = LoggerFactory.getLogger(ProductController.class);
+    private final Logger logger = LoggerFactory.getLogger(ProductController.class);
 
     private ProductService productService;
 

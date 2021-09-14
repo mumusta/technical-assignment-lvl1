@@ -10,9 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-import javax.validation.constraints.Pattern;
+import javax.validation.constraints.*;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModel;
@@ -40,7 +38,7 @@ public class Product implements Serializable {
         length = 45,
         unique = true
     )
-    @NotNull(message = "Name is required")
+    @NotBlank(message = "Name is required")
     @Size(min = 3, max = 45, message = "Name must be between 3 and 45 characters inclusive")
     @Pattern(message = "Name is not valid (follow this regex: ^[a-zA-Z0-9\\s]+$)", regexp = "^[a-zA-Z0-9\\s]+$")
     @ApiModelProperty(notes = "The product's name (unique for each product)")
@@ -51,7 +49,7 @@ public class Product implements Serializable {
         nullable = false,
         length = 525
     )
-    @NotNull(message = "Description is required")
+    @NotBlank(message = "Description is required")
     @Size(min = 3, max = 525, message = "Description must be between 3 and 525 characters inclusive")
     @Pattern(message = "Description is not valid (follow this regex: ^[a-zA-Z0-9\\s]+$)", regexp = "^[a-zA-Z0-9\\s]+$")
     @ApiModelProperty(notes = "The product's description")
@@ -62,7 +60,7 @@ public class Product implements Serializable {
         nullable = false,
         length = 45
     )
-    @NotNull(message = "Color is required")
+    @NotBlank(message = "Color is required")
     @Size(min = 3, max = 45, message = "Color must be between 3 and 45 characters inclusive")
     @Pattern(message = "Color is not valid (follow this regex: ^[a-zA-Z]+$)", regexp = "^[a-zA-Z]+$")
     @ApiModelProperty(notes = "The product's color")
@@ -73,7 +71,7 @@ public class Product implements Serializable {
         nullable = false,
         length = 45
     )
-    @NotNull(message = "Category is required")
+    @NotBlank(message = "Category is required")
     @Size(min = 3, max = 45, message = "Category must be between 3 and 45 characters inclusive")
     @Pattern(message = "Category is not valid (follow this regex: ^[a-zA-Z]+$)", regexp = "^[a-zA-Z]+$")
     @ApiModelProperty(notes = "The product's category")
@@ -84,6 +82,7 @@ public class Product implements Serializable {
         nullable = false
     )
     @NotNull(message = "Price is required")
+    @Positive(message = "Price has to be positive")
     @ApiModelProperty(notes = "The product's price")
     private Double price;
 

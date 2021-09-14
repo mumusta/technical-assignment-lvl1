@@ -11,10 +11,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModel;
@@ -40,7 +37,7 @@ public class Supplier implements Serializable {
         nullable = false,
         length = 45
     )
-    @NotNull(message = "First Name is required")
+    @NotBlank(message = "First Name is required")
     @Size(min = 3, max = 45, message = "First Name must be between 3 and 45 characters inclusive")
     @Pattern(message = "First Name is not valid (follow this regex: ^[a-zA-Z]+$)", regexp = "^[a-zA-Z]+$")
     @ApiModelProperty(notes = "Supplier's first name")
@@ -51,7 +48,7 @@ public class Supplier implements Serializable {
         nullable = false,
         length = 45
     )
-    @NotNull(message = "Last Name is required")
+    @NotBlank(message = "Last Name is required")
     @Size(min = 3, max = 45, message = "Last Name must be between 3 and 45 characters inclusive")
     @Pattern(message = "Last Name is not valid (follow this regex: ^[a-zA-Z]+$)", regexp = "^[a-zA-Z]+$")
     @ApiModelProperty(notes = "Supplier's last name")
@@ -63,7 +60,7 @@ public class Supplier implements Serializable {
         length = 25,
         unique = true
     )
-    @NotNull(message = "Phone Number is required")
+    @NotBlank(message = "Phone Number is required")
     @Size(min = 5, max = 25, message = "Phone Number must be between 5 and 25 characters inclusive")
     @Pattern(message = "Phone Number is not valid (follow this regex: [0-9]+)", regexp = "[0-9]+")
     @ApiModelProperty(notes = "Supplier's phone number (unique for each supplier)")
@@ -75,7 +72,7 @@ public class Supplier implements Serializable {
         length = 265,
         unique = true
     )
-    @NotNull(message = "Email is required")
+    @NotBlank(message = "Email is required")
     @Size(min = 5, max = 265, message = "Email must be between 5 and 265 characters inclusive")
     @Email(message = "Email is not valid",
            regexp = "(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])")
@@ -90,8 +87,15 @@ public class Supplier implements Serializable {
     
     protected Supplier() {}
 
+    public Supplier(String firstName, String lastName, String phoneNumber, String email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+    }
+
     public Supplier(String firstName, String lastName, String phoneNumber, String email,
-            List<SupplierHasProduct> ownedProducts) {
+                    List<SupplierHasProduct> ownedProducts) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;
@@ -99,10 +103,18 @@ public class Supplier implements Serializable {
         this.ownedProducts = ownedProducts;
     }
 
+    public Supplier(Long supplierId, String firstName, String lastName, String phoneNumber, String email, List<SupplierHasProduct> ownedProducts) {
+        this.supplierId = supplierId;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.ownedProducts = ownedProducts;
+    }
 
     public List< Product > getProducts() {
         
-        List < Product > result = new ArrayList<>(); 
+        List < Product > result = new ArrayList<>();
         
         for (SupplierHasProduct x: ownedProducts)
             result.add(x.getProduct());

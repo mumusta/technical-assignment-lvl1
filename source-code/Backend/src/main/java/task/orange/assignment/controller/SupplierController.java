@@ -25,7 +25,7 @@ import javax.validation.Valid;
 @RequestMapping(value = "/api/v1/suppliers")
 public class SupplierController {
 
-    Logger logger = LoggerFactory.getLogger(SupplierController.class);
+    private final Logger logger = LoggerFactory.getLogger(SupplierController.class);
 
     private SupplierService supplierService;
 
@@ -219,25 +219,4 @@ public class SupplierController {
         else return new ResponseEntity<>(HttpStatus.CONFLICT);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

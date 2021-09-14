@@ -22,7 +22,7 @@ import task.orange.assignment.repository.ProductRepository;
 @Transactional
 public class ProductService {
 
-    Logger logger = LoggerFactory.getLogger(ProductService.class);
+    private final Logger logger = LoggerFactory.getLogger(ProductService.class);
 
     @Autowired
     ProductRepository productRepository;
